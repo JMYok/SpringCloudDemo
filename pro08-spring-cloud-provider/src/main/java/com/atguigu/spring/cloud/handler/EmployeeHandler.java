@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.atguigu.cloud.entity.Employee;
+import com.atguigu.spring.cloud.entity.Employee;
 
 @RestController
 public class EmployeeHandler {

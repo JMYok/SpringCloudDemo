@@ -1,4 +1,4 @@
-package com.atguigu.cloud.entity;
+package com.atguigu.spring.cloud.entity;
 
 public class Employee {
 	private Integer empId;
