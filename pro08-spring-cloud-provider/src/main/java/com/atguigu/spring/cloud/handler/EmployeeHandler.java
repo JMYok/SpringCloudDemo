@@ -22,8 +22,9 @@ public class EmployeeHandler {
 	}
 
 	// @HystrixCommand 注解通过 fallbackMethod 属性指定断路情况下要调用的备份方法
+	//注意：方法名和@RequestMapping均和接口对应相同
 	@HystrixCommand(fallbackMethod = "getEmpBackup")
-	@RequestMapping("/provider/circuit/breaker/get/emp")
+	@RequestMapping("/provider/get/emp/with/circuit/breaker")
 	public ResultEntity<Employee> getEmpWithCircuitBreaker(@RequestParam("signal") String signal) {
 		if ("bang".equals(signal)) {
 			throw new RuntimeException();
