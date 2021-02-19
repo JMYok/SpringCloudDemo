@@ -27,7 +27,7 @@ public class MyFallBackFactory implements FallbackFactory<EmployeeRemoteService>
 			}
 			
 			public ResultEntity<Employee> getEmpWithCircuitBreaker(String signal) {
-				return ResultEntity.failed("降级机制生效"+cause.getMessage());
+				return ResultEntity.failed("降级机制生效 ："+cause.getMessage());
 			}
 		};
 	}
