@@ -11,9 +11,11 @@ eureka:
     serviceUrl: 
       defaultZone: http://localhost:5000/eureka/  
       
-zuul: 
+zuul:
+  #ignored-services: # 忽略指定微服务名称，让用户不能通过微服务名称访问  #- atguigu-feign-consumer 
+  ignored-services: '*' #忽略所有微服务名称
+  prefix: /bob # 给访问路径添加统一前缀
   routes: 
     employee: # 自定义路由规则的名称。在底层的数据结构中是 Map 的键 
       serviceId: atguigu-feign-consumer #目标微服务名称，ZuulRoute 类型的一个属性
-      path: /zuul-emp/** #用来代替目标微服务名称的路径， ZuulRoute 类型的一个属性
-      
+      path: /zuul/** #用来代替目标微服务名称的路径， ZuulRoute 类型的一个属性
