@@ -38,5 +38,6 @@
 		<module>pro10-spring-cloud-eureka</module>
 		<module>pro11-spring-cloud-feign-consumer</module>
 		<module>pro11-spring-cloud-dashboard</module>
+		<module>pro13-spring-cloud-zuul</module>
 	</modules>
 </project>
